@@ -19,9 +19,9 @@ public class Book implements Comparable<Book>{
         return author;
     }
 
-    public Book setAuthor(String author) {
+    public void setAuthor(String author) {
         this.author = author;
-        return null;
+
     }
 
     public void setTitle(String title) {

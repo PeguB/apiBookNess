@@ -41,7 +41,17 @@ public class BookService {
         }
         return null;
     }
+    public Book findBookByTitle(String title){
+        for(Book i : Book.getAllBooks()){
+            if(i.getTitle().equals(title)){
+                return i;
+            }
+        }
+        return null;
+    }
     public Book updateAuthorBook(String author, int bookId){
-        return findBook(bookId).setAuthor(author);
+        Book updateBook = findBook(bookId);
+        updateBook.setAuthor(author);
+        return updateBook;
     }
 }
